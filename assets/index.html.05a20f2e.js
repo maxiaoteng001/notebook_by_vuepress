@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";import{o as r,c as t,a as e,d as c}from"./app.29a9c448.js";const o={},s=e("h1",{id:"scrapy",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#scrapy","aria-hidden":"true"},"#"),c(" SCRAPY")],-1),n=[s];function d(_,i){return r(),t("div",null,n)}var f=a(o,[["render",d],["__file","index.html.vue"]]);export{f as default};

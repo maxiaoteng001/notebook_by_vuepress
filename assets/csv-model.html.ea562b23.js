@@ -1,0 +1,19 @@
+import{_ as i}from"./plugin-vue_export-helper.21dcd24c.js";import{r as n,o as a,c as t,a as e,b as d,e as s,d as c}from"./app.29a9c448.js";const l={},o=s(`<h1 id="csv-\u6A21\u5757" tabindex="-1"><a class="header-anchor" href="#csv-\u6A21\u5757" aria-hidden="true">#</a> csv \u6A21\u5757</h1><p>csv\u7528\u6765\u8BFB\u5199csv\u6587\u4EF6</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import csv
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="\u666E\u901A\u8BFB\u5199\u6587\u4EF6" tabindex="-1"><a class="header-anchor" href="#\u666E\u901A\u8BFB\u5199\u6587\u4EF6" aria-hidden="true">#</a> \u666E\u901A\u8BFB\u5199\u6587\u4EF6</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>with open(origin_path,&#39;r&#39;,encoding=&#39;utf-8&#39;) as fr:
+      csv_reader=csv.reader(fr)
+      addresses={}
+      for row in csv_reader:
+            if csv_reader.line_num==1:
+                  continue
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u6309dict\u8BFB\u5199\u6587\u4EF6" tabindex="-1"><a class="header-anchor" href="#\u6309dict\u8BFB\u5199\u6587\u4EF6" aria-hidden="true">#</a> \u6309dict\u8BFB\u5199\u6587\u4EF6</h2><ul><li><p>\u5199\u6587\u4EF6 <code> if not os.path.exists(data_path): with open(data_path, &#39;w&#39;, encoding=&#39;utf-8&#39;, newline=&#39;&#39;) as f: csv_writer = csv.DictWriter(f, fieldnames=field) csv_writer.writeheader() with open(data_path, &#39;a&#39;, encoding=&#39;utf-8&#39;, newline=&#39;&#39;) as f: csv_writer = csv.DictWriter(f, fieldnames=field) csv_writer.writerow(item) </code></p></li><li><p>\u8BFB\u6587\u4EF6 \u8BFB\u53D6\u7684row\u7C7B\u578B: <code>collections.OrderedDict</code>, \u6709get\u5C5E\u6027, \u4F7F\u7528dict(row)\u8F6C\u4E3A\u666E\u901Adict <code> with open(author_links_path, &#39;r&#39;, encoding=&#39;utf-8&#39;, newline=&#39;&#39;) as f: csv_reader = csv.DictReader(f, fieldnames=self.author_link_field) for row in csv_reader: if csv_reader.line_num == 1: continue links.append(dict(row)) </code></p></li></ul><h2 id="\u5176\u4ED6" tabindex="-1"><a class="header-anchor" href="#\u5176\u4ED6" aria-hidden="true">#</a> \u5176\u4ED6</h2><p>\u7528\u5728csv\u7684read\u548Cwriter\u65B9\u6CD5,</p><ul><li>delimiter=&#39;,&#39; # \u5206\u9694\u7B26</li><li>quotechar=&#39;&quot;&#39; # \u5F15\u7528\u7B26, \u5C06\u5185\u5BB9\u7528\u5F15\u53F7\u5305\u542B,\u907F\u514D\u6B67\u4E49</li></ul><h2 id="\u8BFB\u5199\u8D85\u5927\u6587\u4EF6\u65F6" tabindex="-1"><a class="header-anchor" href="#\u8BFB\u5199\u8D85\u5927\u6587\u4EF6\u65F6" aria-hidden="true">#</a> \u8BFB\u5199\u8D85\u5927\u6587\u4EF6\u65F6</h2>`,11),h={href:"https://stackoverflow.com/questions/15063936/csv-error-field-larger-than-field-limit-131072",target:"_blank",rel:"noopener noreferrer"},v=c("\u53C2\u8003stackoverflow"),u=e("ul",null,[e("li",null,[e("p",null,"\u62A5\u9519: _csv.Error: field larger than field limit (131072) - \u539F\u56E0: csv\u6587\u4EF6\u5305\u542B\u7279\u522B\u5927\u7684field, \u9700\u8981\u4FEE\u6539\u6700\u5927\u663E\u793A - \u89E3\u51B3\u4EE3\u7801 ``` import sys import csv maxInt = sys.maxsize decrement = True"),e("pre",null,[e("code",null,`      while decrement:
+      # decrease the maxInt value by factor 10 
+      # as long as the OverflowError occurs.
+
+      decrement = False
+      try:
+            csv.field_size_limit(maxInt)
+      except OverflowError:
+            maxInt = int(maxInt/10)
+            decrement = True
+\`\`\`
+`)])])],-1);function f(m,_){const r=n("ExternalLinkIcon");return a(),t("div",null,[o,e("p",null,[e("a",h,[v,d(r)])]),u])}var w=i(l,[["render",f],["__file","csv-model.html.vue"]]);export{w as default};

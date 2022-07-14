@@ -1,0 +1,11 @@
+import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";import{o as n,c as a,e}from"./app.29a9c448.js";const i={},t=e(`<h1 id="sys" tabindex="-1"><a class="header-anchor" href="#sys" aria-hidden="true">#</a> sys</h1><ol><li>sys.path.append(&#39;&#39;)</li><li>\u4E2D\u65ADpython\u8FDB\u7A0B <ol><li>sys.exit(0) <ol><li>\u4F1A\u5F15\u53D1\u4E00\u4E2A\u5F02\u5E38, SystemExit, \u5982\u679C\u5F02\u5E38\u4E0D\u88AB\u6355\u83B7,, \u89E3\u91CA\u5668\u5C06\u4F1A\u9000\u51FA</li><li>0\u4E3A\u6B63\u5E38\u9000\u51FA, (1-127\u4E3A\u5F02\u5E38)</li><li>\u4F18\u5148\u4F7F\u7528</li></ol></li><li>os._exit() <ol><li>\u76F4\u63A5\u7EC8\u6B62\u89E3\u91CA\u5668\u8FD0\u884C</li></ol></li><li>quit() <ol><li><p>raist SystemExit</p></li><li><p>demo</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code>
+<span class="token keyword">def</span> <span class="token function">test_quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> SystemExit<span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li></ol></li></ol></li></ol>`,2),l=[t];function o(p,c){return n(),a("div",null,l)}var u=s(i,[["render",o],["__file","sys.html.vue"]]);export{u as default};

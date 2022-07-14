@@ -1,0 +1,9 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as n,c as a,e as d}from"./app.29a9c448.js";const i={},s=d(`<h1 id="\u652F\u6301\u5C06markdown\u683C\u5F0F\u7684\u6587\u672C\u6E32\u67D3\u6210html\u9875\u9762" tabindex="-1"><a class="header-anchor" href="#\u652F\u6301\u5C06markdown\u683C\u5F0F\u7684\u6587\u672C\u6E32\u67D3\u6210html\u9875\u9762" aria-hidden="true">#</a> \u652F\u6301\u5C06Markdown\u683C\u5F0F\u7684\u6587\u672C\u6E32\u67D3\u6210HTML\u9875\u9762</h1><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>pip install markdown
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="\u6E32\u67D3" tabindex="-1"><a class="header-anchor" href="#\u6E32\u67D3" aria-hidden="true">#</a> \u6E32\u67D3</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code># extensions\u662Fmarkdown\u7684\u6269\u5C55\u652F\u6301, \u5305\u62EC\u6269\u5C55\u8BED\u6CD5, \u4EE3\u7801\u9AD8\u4EAE\u548C\u76EE\u5F55\u751F\u6210
+post.body = markdown.markdown(post.body, 
+                            extensions=[
+                                &#39;markdown.extensions.extra&#39;,
+                                &#39;markdown.extensions.codehilite&#39;,
+                                &#39;markdown.extensions.toc&#39;,
+                            ])
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="safe\u6807\u7B7E" tabindex="-1"><a class="header-anchor" href="#safe\u6807\u7B7E" aria-hidden="true">#</a> safe\u6807\u7B7E</h2><p>\u89C1template</p>`,6),r=[s];function t(o,l){return n(),a("div",null,r)}var h=e(i,[["render",t],["__file","python-markdown.html.vue"]]);export{h as default};

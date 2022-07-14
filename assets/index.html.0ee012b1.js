@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";import{o as t,c as o,a as e,d as r}from"./app.29a9c448.js";const n={},c=e("h1",{id:"django",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#django","aria-hidden":"true"},"#"),r(" DJANGO")],-1),d=[c];function s(_,i){return t(),o("div",null,d)}var f=a(n,[["render",s],["__file","index.html.vue"]]);export{f as default};

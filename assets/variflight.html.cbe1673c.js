@@ -1,0 +1,18 @@
+import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";import{r,o as l,c as o,a as e,b as t,e as s,d as i}from"./app.29a9c448.js";const d={},c=s(`<h1 id="\u98DE\u5E38\u51C6" tabindex="-1"><a class="header-anchor" href="#\u98DE\u5E38\u51C6" aria-hidden="true">#</a> \u98DE\u5E38\u51C6</h1><p>[TOC]</p><p>\u98DE\u5E38\u51C6\u89E3\u51B3\u7684\u95EE\u9898:</p><ol><li>\u8BF7\u6C42\u54CD\u5E94aes\u52A0\u5BC6</li><li>signature\u4F5C\u4E3A\u8BF7\u6C42\u53C2\u6570\u9A8C\u8BC1</li><li>uniqueId\u6CE8\u518C\u673A\u5236\u53EF\u4EE5\u514D\u767B\u5F55\u722C\u53D6, \u6BCF\u4E2AuniqueId\u53C8\u6709\u9650\u5236\u6B21\u6570(app\u5185\u524D\u7AEF\u8BBE\u7F6E\u9650\u5236\u4E09\u6B21, \u5B9E\u9645\u4E0A\u53EF\u4F7F\u7528\u6B21\u6570\u66F4\u591A)</li></ol><p>\u7248\u672C<code>[vz.com_V5.0.9.apk]</code></p><h2 id="_1-signature\u89E3\u5BC6\u95EE\u9898" tabindex="-1"><a class="header-anchor" href="#_1-signature\u89E3\u5BC6\u95EE\u9898" aria-hidden="true">#</a> 1. signature\u89E3\u5BC6\u95EE\u9898</h2><ol><li><p>\u9006\u5411app\u7ED3\u5408frida\u52A8\u6001\u8C03\u8BD5, \u5206\u6790\u53D1\u73B0\u52A0\u5BC6\u8C03\u7528\u4E86<code>com.feeyo.vz.core.VZCore.g</code></p><div class="language-Java ext-Java line-numbers-mode"><pre class="language-Java"><code>package com.feeyo.vz.core;
+
+import android.content.Context;
+
+public class VZCore {
+    static {
+        System.loadLibrary(&quot;Natciml&quot;);
+    }
+
+    public static native byte[] de(String str, byte[] bArr);
+
+    public static native byte[] en(String str, byte[] bArr);
+
+    public static native String g(Context context, String[] strArr);
+
+    public static native String l(Context context);
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li><li><p>\u91C7\u7528xposed hook\u8C03\u7528\u5B9E\u73B0, sekiro\u63D0\u4F9B\u670D\u52A1</p></li></ol><h2 id="_2-uniqueid\u6CE8\u518C\u95EE\u9898" tabindex="-1"><a class="header-anchor" href="#_2-uniqueid\u6CE8\u518C\u95EE\u9898" aria-hidden="true">#</a> 2. uniqueId\u6CE8\u518C\u95EE\u9898</h2>`,8),v=i("uniqueId\u57282021\u5E743\u6708\u4EFD\u53EA\u9700\u8981\u4E00\u4E2A\u8BF7\u6C42\u5373\u53EF\u6CE8\u518C\u4E3A\u6709\u6548, 6\u6708\u4EFD\u9700\u8981\u591A\u4E2A\u8BF7\u6C42 "),u={href:"https://app.variflight.com/v4/config/newInstall?devicetimezone=28800&feeyo_mode=xe1",target:"_blank",rel:"noopener noreferrer"},p=i("https://app.variflight.com/v4/config/newInstall?devicetimezone=28800&feeyo_mode=xe1"),m={href:"https://app.variflight.com/v4/tripindex/getFutureTrip?feeyo_mode=xe1",target:"_blank",rel:"noopener noreferrer"},h=i("https://app.variflight.com/v4/tripindex/getFutureTrip?feeyo_mode=xe1"),_={href:"https://app.variflight.com/crawl/InstalledApps?feeyo_mode=xe1",target:"_blank",rel:"noopener noreferrer"},b=i("https://app.variflight.com/crawl/InstalledApps?feeyo_mode=xe1");function f(g,x){const n=r("ExternalLinkIcon");return l(),o("div",null,[c,e("ol",null,[e("li",null,[v,e("ul",null,[e("li",null,[e("a",u,[p,t(n)])]),e("li",null,[e("a",m,[h,t(n)])]),e("li",null,[e("a",_,[b,t(n)])])])])])])}var I=a(d,[["render",f],["__file","variflight.html.vue"]]);export{I as default};

@@ -1,0 +1,39 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as i,c as s,e as r}from"./app.29a9c448.js";const n={},a=r(`<h1 id="supervisor-\u8FDB\u7A0B\u5B88\u62A4" tabindex="-1"><a class="header-anchor" href="#supervisor-\u8FDB\u7A0B\u5B88\u62A4" aria-hidden="true">#</a> supervisor \u8FDB\u7A0B\u5B88\u62A4</h1><p>supervisor\u4F7F\u7528python\u7F16\u5199\u7684\u8FDB\u7A0B\u5B88\u62A4\u5E94\u7528, \u53EF\u4EE5\u5728\u8FDB\u7A0B\u610F\u5916\u4E2D\u65AD\u540E\u91CD\u542F</p><h2 id="\u5B89\u88C5" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5" aria-hidden="true">#</a> \u5B89\u88C5</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>sudo yum install supervisor
+# \u6216\u8005
+sudo pip install supervisor
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u751F\u6210\u914D\u7F6E\u6587\u4EF6" tabindex="-1"><a class="header-anchor" href="#\u751F\u6210\u914D\u7F6E\u6587\u4EF6" aria-hidden="true">#</a> \u751F\u6210\u914D\u7F6E\u6587\u4EF6</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>sudo echo_supervisord_conf &gt; /etc/supervisord.conf  
+# \u5982\u679C\u63D0\u9192\u6CA1\u6709\u6743\u9650, \u53EF\u4EE5\u5148echo_supervisord_conf \u83B7\u53D6\u5185\u5BB9, \u521B\u5EFA\u914D\u7F6E\u6587\u4EF6\u540E\u590D\u5236\u8FDB\u53BB
+# \u4FEE\u6539conf\u6587\u4EF6\u7684\u914D\u7F6E, supervisor\u5C06\u52A0\u8F7D\u6587\u4EF6\u5939\u4E0B\u7684\u6240\u6709conf\u6587\u4EF6:
+[include]
+files = /etc/supervisor/conf.d/*.conf
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>conf\u6587\u4EF6demo</li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[program:scrapyd]
+command=scrapyd              ; the program (relative uses PATH, can take args)
+process_name=%(program_name)s ; process_name expr (default %(program_name)s)
+;directory=~                ; directory to cwd to before exec (def no cwd)
+autostart=true                ; start at supervisord start (default: true)
+startsecs=1                   ; # of secs prog must stay up to be running (def. 1)
+startretries=3                ; max # of serial start failures when starting (default 3)
+autorestart=True        ; when to restart if exited after running (def: unexpected)
+stopsignal=KILL               ; signal used to kill process (default TERM)
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u542F\u52A8" tabindex="-1"><a class="header-anchor" href="#\u542F\u52A8" aria-hidden="true">#</a> \u542F\u52A8</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>supervisord  # \u542F\u52A8supervisor\u670D\u52A1
+
+supervisord -c /etc/supervisord.conf
+supervisorctl -c /etc/supervisord.conf status
+    &gt; mongodb       RUNNING   pid 2366, uptime 0:01:00
+    ...
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u5E38\u7528\u7BA1\u7406\u547D\u4EE4" tabindex="-1"><a class="header-anchor" href="#\u5E38\u7528\u7BA1\u7406\u547D\u4EE4" aria-hidden="true">#</a> \u5E38\u7528\u7BA1\u7406\u547D\u4EE4</h2><ul><li><p>\u91CD\u542Fsupervisor service supervisor restart</p></li><li><p>\u542F\u52A8\u76F8\u5E94\u8FDB\u7A0B supervisorctl start app</p></li><li><p>\u505C\u6B62\u8FDB\u7A0B supervisorctl start app</p></li><li><p>\u505C\u6B62\u6240\u6709\u8FDB\u7A0B supervisorctl start all</p></li><li><p>\u8F7D\u5165\u65B0\u7684\u914D\u7F6E\u6587\u4EF6 supervisorctl reload</p></li><li><p>\u66F4\u65B0\u4FEE\u6539\u7684\u914D\u7F6E\u6587\u4EF6, \u6CA1\u6539\u53D8\u7684\u4E0D\u5F71\u54CD<br> supervisorctl update</p></li></ul><h2 id="\u914D\u7F6E\u8FDB\u7A0B" tabindex="-1"><a class="header-anchor" href="#\u914D\u7F6E\u8FDB\u7A0B" aria-hidden="true">#</a> \u914D\u7F6E\u8FDB\u7A0B</h2><blockquote><p>\u914D\u7F6E\u6587\u4EF6\u4F4D\u7F6E:<code>/etc/supervisor/conf.d/..</code> \u6BCF\u4E2A\u8FDB\u7A0B\u8BBE\u4E00\u4E2A\u914D\u7F6E\u6587\u4EF6, \u4EE5conf\u7ED3\u5C3E \u5185\u5BB9:</p></blockquote><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[program:mongodb]
+directory = /root/amazon_server  # \u8FD0\u884C\u76EE\u5F55
+command =  /usr/bin/mongod -port 27017 --dbpath /vr/lib/mongo
+autostart = true     ; \u5728 supervisord \u542F\u52A8\u7684\u65F6\u5019\u4E5F\u81EA\u52A8\u542F\u52A8
+startsecs = 5        ; \u542F\u52A8 5 \u79D2\u540E\u6CA1\u6709\u5F02\u5E38\u9000\u51FA\uFF0C\u5C31\u5F53\u4F5C\u5DF2\u7ECF\u6B63\u5E38\u542F\u52A8\u4E86
+autorestart = true   ; \u7A0B\u5E8F\u5F02\u5E38\u9000\u51FA\u540E\u81EA\u52A8\u91CD\u542F
+startretries = 3     ; \u542F\u52A8\u5931\u8D25\u81EA\u52A8\u91CD\u8BD5\u6B21\u6570\uFF0C\u9ED8\u8BA4\u662F 3
+stopsignal= KILL
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><blockquote><p>\u9519\u8BEF, \u8FD4\u56DE127\u662F\u547D\u4EE4\u884C\u9519\u8BEF</p></blockquote></blockquote><h2 id="web\u754C\u9762\u7BA1\u7406-\u53EF\u89C6\u5316\u8FDB\u7A0B\u7BA1\u7406" tabindex="-1"><a class="header-anchor" href="#web\u754C\u9762\u7BA1\u7406-\u53EF\u89C6\u5316\u8FDB\u7A0B\u7BA1\u7406" aria-hidden="true">#</a> web\u754C\u9762\u7BA1\u7406 \u53EF\u89C6\u5316\u8FDB\u7A0B\u7BA1\u7406</h2><p>\u4FEE\u6539supervisord.conf\u7684 inet_http_server\u90E8\u5206</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[inet_http_server]           ; inet (TCP) server disabled by default
+port=0.0.0.0:9001            ; \u5F00\u653E\u516C\u7F51ip(ip_address:port specifier, *:port for all iface)
+username=xxxxxxx             ; (default is no username (open server))
+password=xxxxxxx             ; (default is no password (open server))
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u5F00\u673A\u81EA\u542F\u52A8" tabindex="-1"><a class="header-anchor" href="#\u5F00\u673A\u81EA\u542F\u52A8" aria-hidden="true">#</a> \u5F00\u673A\u81EA\u542F\u52A8</h2><ul><li>unix\u81EA\u542F\u52A8, \u9700\u8981\u5C06\u547D\u4EE4\u6DFB\u52A0\u5230<code>/etc/rc.local</code></li><li>\u6DFB\u52A0\u5185\u5BB9:</li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>/usr/bin/supervisord -c /etc/supervisord.conf
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul><li>\u67E5\u770B\u4E24\u4E2A\u6587\u4EF6\u7684\u7EDD\u5BF9\u4F4D\u7F6E:</li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>find / -name supervisord
+&gt; /usr/local/python/bin/supervisord
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>`,24),d=[a];function l(t,c){return i(),s("div",null,d)}var v=e(n,[["render",l],["__file","supervisor.html.vue"]]);export{v as default};

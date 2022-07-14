@@ -1,0 +1,1 @@
+import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";import{o as a,c as t,a as e,d as o}from"./app.29a9c448.js";const s={},c=e("h1",{id:"redis",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#redis","aria-hidden":"true"},"#"),o(" REDIS")],-1),d=[c];function n(i,_){return a(),t("div",null,d)}var f=r(s,[["render",n],["__file","index.html.vue"]]);export{f as default};
